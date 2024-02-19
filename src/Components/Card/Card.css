@@ -1,0 +1,18 @@
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+    padding: 5px;
+    background-color: rgb(125, 125, 129);
+    border-radius: 10px;
+    color: white;
+    border: 1px solid rgb(95, 91, 91);
+}
+
+.info {
+    margin-left: 1em;
+}
+
+.profile-pic {
+    height: 60px;
+}

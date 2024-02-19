@@ -1,35 +1,35 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { Component } from 'react';
+import Card from './Components/Card/Card';
+import InputCard from './Components/Card/InputCard/InputCard';
 import './App.css'
+import CardList from './Components/CardList/CardList';
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+
+class App extends Component {
+  //style=... just testing
+  render() {
+    return (
+      <div className='header'>
+        <h2 style={{ color: Math.random() < 0.5 ? 'green' : 'red'}}>{this.props.title}</h2> 
+        <InputCard />
+        <CardList />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    );
+  }
 }
 
-export default App
+export default App;
+
+/* export default App;
+
+
+ const App = ({title}) => (
+
+  <div className='header'> <h2>{title}</h2> </div>
+
+);
+
+export default App;  */
+
