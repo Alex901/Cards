@@ -18,13 +18,19 @@ const testData = [
 ];
 
 class App extends Component {
+   state = {
+     profiles: testData,
+  }
+  
+
+
   //style=... just testing
   render() {
     return (
       <div className='header'>
         <h2 style={{ color: Math.random() < 0.5 ? 'green' : 'red'}}>{this.props.title}</h2> 
         <InputCard />
-        <CardList profiles={testData}/>
+        <CardList profiles={this.state.profiles}/>
       </div>
     );
   }
