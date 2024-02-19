@@ -10,7 +10,7 @@ class Card extends React.Component {
             <div className='user-profile'>
                 <img className="profile-pic" src= {profile.avatar_url} />
                 <div className='info'>
-                    <div className='name'> <strong> {profile.name}} </strong>  </div>
+                    <div className='name'> <strong> {profile.name} </strong>  </div>
                     <div className='company'> {profile.company} </div>    
                 </div>    
             </div>

@@ -2,18 +2,21 @@ import React, { Component } from 'react';
 import Card from '../Card/Card';
 import './CardList.css';
 
-const testData = [
+/* const testData = [
     {name: "Alex901", avatar_url: "https://avatars.githubusercontent.com/u/4184656?v=4",
-    company: "none"}, 
+    company: "Oddbits"}, 
     {name: "mojombo", avatar_url: "https://avatars.githubusercontent.com/u/1?v=4",
-    company: "none"}, 
-];
+    company: "Facebook"}, 
+    {name: "defunkt", avatar_url: "https://avatars.githubusercontent.com/u/2?v=4",
+    company: "NASA"}, 
+    {name: "pjhyett", avatar_url: "https://avatars.githubusercontent.com/u/3?v=4",
+    company: "Google"}, 
+]; */
 
 const CardList = (props) => (
-
     <div className='card-list'>
-        <Card {...testData[0]} />
-        <Card {...testData[1]} />
+        {props.profiles.map(profile => <Card {...profile}/>)}
+
     </div>
 );
 
