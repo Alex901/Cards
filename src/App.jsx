@@ -19,9 +19,14 @@ const testData = [
 
 class App extends Component {
    state = {
-     profiles: testData,
+     profiles: [],
   }
   
+  addNewProfile = (profileData) => {
+    this.setState(prevState => ({
+      profiles: [...prevState.profiles, profileData],
+    }))
+  };
 
 
   //style=... just testing
@@ -29,7 +34,7 @@ class App extends Component {
     return (
       <div className='header'>
         <h2 style={{ color: Math.random() < 0.5 ? 'green' : 'red'}}>{this.props.title}</h2> 
-        <InputCard />
+        <InputCard onSubmit={this.addNewProfile}/>
         <CardList profiles={this.state.profiles}/>
       </div>
     );

@@ -7,10 +7,11 @@ import axios from 'axios';
 class InputCard extends React.Component {
     state = { userName: '' };
 
-    handleSubmit = (event) => {
+    handleSubmit = async (event) => {
         event.preventDefault(); //Prevent default action: refresh page
-        
-        console.log(this.state.userName);
+        const resp = await axios.get(`https://api.github.com/users/${this.state.userName}`);
+        this.props.onSubmit(resp.data);
+        this.setState({ userName: ''});
     }
 
     render() {
