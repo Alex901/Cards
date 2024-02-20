@@ -3,10 +3,14 @@
     align-items: center;
     margin-bottom: 3px;
     padding: 5px;
-    background-color: rgb(125, 125, 129);
+    background-color: rgb(72, 72, 84);
     border-radius: 10px;
-    color: white;
-    border: 1px solid rgb(95, 91, 91);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(177, 164, 164);
+}
+
+.user-profile:hover {
+    background-color: rgb(99, 103, 106);
 }
 
 .info {

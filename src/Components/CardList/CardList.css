@@ -3,5 +3,7 @@
     padding: 1em;
     background-color: rgb(208, 202, 202);
     border-radius: 10px;
+    border: 1px solid black;
+    display: block
 }
 

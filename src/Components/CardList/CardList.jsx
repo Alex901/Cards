@@ -15,7 +15,8 @@ import './CardList.css';
 
 const CardList = (props) => (
     
-    <div className='card-list'>
+    <div className='card-list' style={{display : props.profiles.length > 0 ? 
+    'block' : 'none' }}>
         {props.profiles.map(profile => <Card key={profile.id}{...profile}/>)}
 
     </div>
