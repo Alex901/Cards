@@ -5,13 +5,14 @@ import axios from 'axios';
 
 
 class InputCard extends React.Component {
-    state = { userName: '' };
+    state = { userName: '', followers: '' };
 
     handleSubmit = async (event) => {
         event.preventDefault(); //Prevent default action: refresh page
         const resp = await axios.get(`https://api.github.com/users/${this.state.userName}`);
         this.props.onSubmit(resp.data);
         this.setState({ userName: ''});
+        this.setState({ followers: '' });
     }
 
     render() {
@@ -22,7 +23,7 @@ class InputCard extends React.Component {
                         type="text"
                         placeholder='GitHub username'
                         value={this.state.userName}
-                        onChange={event => this.setState({ userName: event.target.value})}
+                        onChange={event => this.setState({ userName: event.target.value })}
                     />
                     <button> ok </button>
                 </form>
